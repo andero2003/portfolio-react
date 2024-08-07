@@ -6,15 +6,21 @@ import { FaGithub } from "react-icons/fa6";
 import { ReactComponent as RobloxIcon } from '../assets/RobloxIcon.svg';
 import { ReactComponent as LuaIcon } from '../assets/LuaIcon.svg';
 import { ReactComponent as TSIcon } from '../assets/TSIcon.svg';
+import { ReactComponent as TailwindIcon } from '../assets/TailwindIcon.svg';
+import { ReactComponent as FlutterIcon } from '../assets/FlutterIcon.svg';
+import { ReactComponent as DartIcon } from '../assets/DartIcon.svg';
+import { ReactComponent as FirebaseIcon } from '../assets/FirebaseIcon.svg';
 
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import { FaReact } from 'react-icons/fa6';
 
 import balloonThumbnail from '../assets/balloon_sim.jpg';
 import miningThumbnail from '../assets/mining_sim.jpg';
 import powerThumbnail from '../assets/power_battlegrounds.png';
 import workoutThumbnail from '../assets/workout.jpg';
+import queueThumbnail from '../assets/queue_app.png';
 
 import Button from '../components/Button';
 
@@ -27,7 +33,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, image, children }: ProjectCardProps) => {
     return (
-        <div className='w-[356px] aspect-video flex flex-col items-center justify-center bg-primary-neutral m-4 rounded-lg shadow-md font-primary'>
+        <div className='w-[356px] aspect-video flex flex-col items-center justify-center bg-primary-neutral m-4 shadow-md font-primary'>
             <img src={image} alt='balloon simulator' className='w-full rounded-t-lg h-48 object-cover shadow-lg' />
             <div className='p-4'>
                 <h3 className='text-primary-dark font-semibold text-3xl text-left mb-2'>{title}</h3>
@@ -86,7 +92,31 @@ const myProjects = [
             <FaCss3Alt className='text-blue-500 text-2xl' />,
             <FaGithub className='text-black text-2xl' />,
         ]
-    }
+    },
+    {
+        title: "This Portfolio",
+        description: "This portfolio website was developed using React, TypeScript and TailwindCSS and hosted on GitHub.",
+        image: 'https://via.placeholder.com/356x200',
+        link: "",
+        tech: [
+            <TSIcon width={30} height={30} className='rounded-sm' />,
+            <FaReact className='text-blue-400 text-2xl' />,
+            <TailwindIcon width={30} height={30} />,
+            <FaGithub className='text-black text-2xl' />,
+        ]
+    },
+    {
+        title: "Queue Management App",
+        description: "A team university coursework, for which I was the group leader. A mobile app to manage virtual queues, developed with Dart, Flutter and Firebase.",
+        image: queueThumbnail,
+        link: "https://github.com/SofEng-Coursework/client",
+        tech: [
+            <DartIcon width={30} height={30} />,
+            <FlutterIcon width={30} height={30} />,
+            <FirebaseIcon width={30} height={30} />,
+            <FaGithub className='text-black text-2xl' />,
+        ]
+    },
 ]
 
 const Projects = () => {
