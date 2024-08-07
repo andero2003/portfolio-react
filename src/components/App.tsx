@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import Layout from '../pages/Layout';
 import Missing from '../pages/Missing';
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Missing />} />
         </Route>
       </Routes>

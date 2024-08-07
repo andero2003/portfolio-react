@@ -1,12 +1,13 @@
 import React from 'react'
+import { DefaultAnimatedPage } from '../components/DefaultAnimatedPage';
 
 const Missing = () => {
     return (
-        <div className='flex items-center'>
+        <DefaultAnimatedPage className='flex items-center' key='missing'>
             <h1 className='text-6xl'>
                 404 Page Not Found!
             </h1>
-        </div>
+        </DefaultAnimatedPage>
     );
 }
 
