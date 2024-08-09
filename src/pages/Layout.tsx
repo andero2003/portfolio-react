@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet, Link, useLocation, useOutlet } from 'react-router-dom';
 import { IoMenu } from 'react-icons/io5';
 import Button from '../components/Button';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -39,6 +39,17 @@ const NavigationBar = ({ isShown }: NavigationBarProps) => {
     )
 }
 
+const AnimatedOutlet = () => {
+    const location = useLocation();
+    const element = useOutlet();
+
+    return (
+        <AnimatePresence mode="wait" initial={true}>
+            {element && React.cloneElement(element, { key: location.pathname })}
+        </AnimatePresence>
+    );
+};
+
 const Layout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
@@ -46,7 +57,7 @@ const Layout = () => {
     return (
         <>
             <div className='bg-primary-dark p-4 flex items-center flex-row justify-between font-primary shadow-2xl'>
-                <h1 className='text-primary-neutral font-bold text-3xl tracking-widest shadow-lg'>
+                <h1 className='text-primary-neutral font-bold ml-2 text-3xl tracking-widest shadow-lg'>
                     ANDERO LAVRINENKO
                 </h1>
 
@@ -61,9 +72,7 @@ const Layout = () => {
                 </div>
             </div>
 
-            <AnimatePresence initial={true} mode='wait'>
-                <Outlet key={location.pathname} />
-            </AnimatePresence>
+            <AnimatedOutlet />
         </>
     );
 }
