@@ -4,6 +4,8 @@ import { IoMenu } from 'react-icons/io5';
 import Button from '../components/Button';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import './Layout.css';
+
 type NavigationBarButtonProps = {
     to: string
     text: string
@@ -12,12 +14,13 @@ type NavigationBarButtonProps = {
 const NavigationBarButton = ({ to, text }: NavigationBarButtonProps) => {
     const location = useLocation();
     const pathname = location.pathname;
-    console.log(pathname);
+
+    const isSelected = pathname === to;
 
     return (
         <Button>
-            <Link to={to} className={'text-primary-neutral mx-2 pr-3 pl-3 transition-all ' + (pathname === to ? 'underline' : '')}>
-                {text}
+            <Link to={to} className={'text-primary-neutral mx-2 pr-3 pl-3 transition-all'}>
+                <span className='underline-effect'>{text}</span>
             </Link>
         </Button>
     )
@@ -34,7 +37,6 @@ const NavigationBar = ({ isShown }: NavigationBarProps) => {
         }>
             <NavigationBarButton to='/' text='Home' />
             <NavigationBarButton to='/projects' text='Projects' />
-            <NavigationBarButton to='/contact' text='Contact' />
         </nav>
     )
 }
@@ -56,7 +58,7 @@ const Layout = () => {
 
     return (
         <>
-            <div className='bg-primary-dark p-4 flex items-center flex-row justify-between font-primary shadow-2xl'>
+            <div className='p-4 mt-1 flex items-center flex-row justify-between font-primary'>
                 <h1 className='text-primary-neutral font-bold ml-2 text-3xl tracking-widest shadow-lg'>
                     ANDERO LAVRINENKO
                 </h1>

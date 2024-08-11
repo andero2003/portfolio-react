@@ -1,0 +1,22 @@
+.underline-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-effect::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline-effect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

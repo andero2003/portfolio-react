@@ -37,7 +37,7 @@ const MY_PROJECTS: Project[] = [
         tech: [
             <LuaIcon width={32} height={32} />,
             <RobloxIcon width={28} height={28} fill='blue' />,
-            <FaGithub className='text-black text-2xl' />
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
     {
@@ -48,7 +48,7 @@ const MY_PROJECTS: Project[] = [
         tech: [
             <LuaIcon width={32} height={32} />,
             <RobloxIcon width={28} height={28} fill='blue' />,
-            <FaGithub className='text-black text-2xl' />,
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
     {
@@ -59,7 +59,7 @@ const MY_PROJECTS: Project[] = [
         tech: [
             <TSIcon width={30} height={30} className='rounded-sm' />,
             <RobloxIcon width={28} height={28} fill='blue' />,
-            <FaGithub className='text-black text-2xl' />,
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
     {
@@ -71,19 +71,19 @@ const MY_PROJECTS: Project[] = [
             <IoLogoJavascript className='text-yellow-400 text-2xl' />,
             <FaHtml5 className='text-red-500 text-2xl' />,
             <FaCss3Alt className='text-blue-500 text-2xl' />,
-            <FaGithub className='text-black text-2xl' />,
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
     {
         title: "This Portfolio",
         description: "This portfolio website was developed using React, TypeScript and TailwindCSS and hosted on GitHub.",
-        image: 'https://via.placeholder.com/356x200',
+        image: 'https://dummyimage.com/600x400/000/fff&text=+',
         link: "",
         tech: [
             <TSIcon width={30} height={30} className='rounded-sm' />,
             <FaReact className='text-blue-400 text-2xl' />,
             <TailwindIcon width={30} height={30} />,
-            <FaGithub className='text-black text-2xl' />,
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
     {
@@ -95,7 +95,7 @@ const MY_PROJECTS: Project[] = [
             <DartIcon width={30} height={30} />,
             <FlutterIcon width={30} height={30} />,
             <FirebaseIcon width={30} height={30} />,
-            <FaGithub className='text-black text-2xl' />,
+            <FaGithub className='text-primary-neutral text-2xl' />
         ]
     },
 ]

@@ -14,12 +14,12 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, image, children }: ProjectCardProps) => {
     return (
-        <div className='w-[356px] aspect-video flex flex-col items-center justify-center bg-primary-neutral m-4 shadow-md font-primary'>
-            <img src={image} alt='balloon simulator' className='w-full rounded-t-lg h-48 object-cover shadow-lg' />
+        <div className='w-[356px] aspect-video flex flex-col items-center justify-center bg-primary-dark m-4 shadow-md font-primary'>
+            <img src={image} alt='balloon simulator' className='w-full h-48 object-cover shadow-lg' />
             <div className='p-4'>
-                <h3 className='text-primary-dark font-semibold text-3xl text-left mb-2'>{title}</h3>
-                <p className='text-primary-dark text-lg line-clamp-3 text-left'>{description}</p>
-                <h3 className='font-bold text-left mt-6 mb-2'>TECHNOLOGIES USED</h3>
+                <h3 className='text-primary-neutral font-semibold text-2xl text-left mb-2'>{title}</h3>
+                <p className='text-primary-neutral text-lg line-clamp-3 text-left'>{description}</p>
+                <h3 className='font-bold text-left text-primary-neutral mt-6 mb-2'>TECHNOLOGIES USED</h3>
                 <div className='flex flex-wrap items-center justify-left gap-2'>
                     {children}
                 </div>

@@ -13,7 +13,7 @@ module.exports = {
         'accent-pastel': '#4688c2',
       },
       fontFamily: {
-        'primary': ['Dosis', 'sans-serif'],
+        'primary': ['Oxygen', 'sans-serif'],
         'code': ['Fira Code', 'monospace'],
       },
     },

@@ -3,12 +3,11 @@ import './Button.css';
 
 type ButtonProps = {
     children: React.ReactNode,
-    onClick?: () => void
-}
+} & React.ComponentProps<'button'>;
 
-function Button({ children, onClick }: ButtonProps) {
+function Button({ children, ...rest }: ButtonProps) {
     return (
-        <button onClick={onClick}>
+        <button {...rest}>
             {children}
         </button>
     )
