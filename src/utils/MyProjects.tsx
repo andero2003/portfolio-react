@@ -14,6 +14,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaReact } from 'react-icons/fa6';
 
+import gardenThumbnail from '../assets/garden.png';
 import balloonThumbnail from '../assets/balloon_sim.jpg';
 import miningThumbnail from '../assets/mining_sim.jpg';
 import powerThumbnail from '../assets/power_battlegrounds.png';
@@ -29,6 +30,16 @@ type Project = {
 }
 
 const MY_PROJECTS: Project[] = [
+    {
+        title: "Garden Tower Defense",
+        description: "A tower defense game that has accumulated over 160M plays in its first two months. As a second engineer, I mainly work on new unit implementation, performance optimisation and diagnosing issues.",
+        image: gardenThumbnail,
+        link: "https://www.roblox.com/games/108533757090220/Garden-Tower-Defense",
+        tech: [
+            <LuaIcon width={32} height={32} />,
+            <RobloxIcon width={28} height={28} fill='blue' />,
+        ]
+    },
     {
         title: "Balloon Simulator",
         description: "A Roblox game where you gain money by lifting objects with balloons. Has accumulated over 50M plays.",
