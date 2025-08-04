@@ -32,7 +32,7 @@ type Project = {
 const MY_PROJECTS: Project[] = [
     {
         title: "Garden Tower Defense",
-        description: "A tower defense game that has accumulated over 160M plays in its first two months. As a second engineer, I mainly work on new unit implementation, performance optimisation and diagnosing issues.",
+        description: "A tower defense game that has accumulated over 160M plays in its first two months.",
         image: gardenThumbnail,
         link: "https://www.roblox.com/games/108533757090220/Garden-Tower-Defense",
         tech: [
